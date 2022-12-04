@@ -1,7 +1,7 @@
 #!/bin/bash
 
 h4rpy() {
-	terminator -l h4rpy
+	terminator -u -l h4rpy
 }
 
 ui() {
