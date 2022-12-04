@@ -20,7 +20,7 @@ aireplay() {
 			aireplay-ng -0 $packets -a $bssid $interface
 			restart
 		else
-			aireplay-ng -0 $packets -c $client -a $bssid $interface
+			aireplay-ng --deauth $packets -c $client -a $bssid $interface
 			unset client
 			restart
 	fi
