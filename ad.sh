@@ -29,6 +29,7 @@ airodump() {
 	cd Output/$output
 	echo -e "[${green}+${default}] Capturing packets on $bssid. Use Ctrl+C to stop the operation."
 	echo -e "[${green}+${default}] Press Enter to continue."
+	interface=$(cat .interface.txt)
 	echo -e "[${green}+${default}] Press Enter  $interface to continue."
 	read
 	airodump-ng --bssid $bssid --channel $channel --write $output $interface
