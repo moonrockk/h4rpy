@@ -9,6 +9,10 @@ aireplay() {
 	clear
 	echo -ne "[${green}+${default}] Press Enter to start deauthentication attack."
 	read
+	echo -ne "[${green}+${default}] Enter the Network interface: "
+	read interface
+	echo -ne "[${green}+${default}] Enter the MAC address of wireless router: "
+	read bssid
 	echo -ne "[${green}+${default}] Enter the MAC address of wireless client (optional, press enter for broadcast deauthentication): "
 	read client
 	echo -ne "[${green}+${default}] Enter the number of number of groups of deauthentication packets to send out: "
@@ -37,6 +41,5 @@ restart() {
 	yellow='\033[0;33m'
 	default='\033[0;39m'
 
-read_parameters
 aireplay
 restart
